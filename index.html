@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>QR Code Scanner</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>QR Code Scanner</h1>
+      <label class="theme-toggle">
+        <input type="checkbox" id="darkModeToggle" /> 🌙
+      </label>
+    </header>
+
+    <div class="section">
+      <div id="my-qr-reader"></div>
+      <button id="start-scan-btn">Start Scanning</button>
+    </div>
+
+    <div id="scan-result" class="hidden">
+      <p><strong>Scanned URL:</strong> <span id="scanned-url"></span></p>
+      <div class="action-buttons">
+        <button id="open-link-btn">Open Link</button>
+        <button id="scan-again-btn">Scan Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="script.js"></script>
+</body>
+</html>
